@@ -52,9 +52,15 @@ app.get("/listings/:id", (req, res)=>{
 app.post("/listings", wrapAsync((req, res)=>{
     let {listing}=req.body;
     let newListing=new Listing(listing);
-    newListing.save().then(result => console.log(result)).catch(err => res.send(err));
+    newListing.save().then(result => console.log(result));
     res.redirect("/listings");
 }));
+// app.post("/listings", wrapAsync((req, res)=>{
+//     let {listing}=req.body;
+//     let newListing=new Listing(listing);
+//     newListing.save().then(result => console.log(result)).catch(err => res.send(err));
+//     res.redirect("/listings");
+// }));
 
 //Edit Route 
 app.get("/listings/:id/edit", (req, res)=>{
@@ -76,6 +82,7 @@ app.delete("/listings/:id", (req, res)=>{
 })
 
 app.use((err, req, res, next)=>{
+    console.log("***************************");
     res.send("Something went wrong!");
 })
 
