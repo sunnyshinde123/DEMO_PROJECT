@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
+    font-family: 'Times New Roman', Times, serif !important;
 }
 .container{
     flex:1;
@@ -122,14 +122,19 @@ footer{
 
 /* Show Listing */
 
-.card{
+.show-card{
+    border: none !important;
+}
+
+.index-card{
     border: none !important;
 }
 
 
 
 .listingDetails{
-    line-height: 1.5;
+    line-height: 1.6;
+    
 }
 
 .form-btn{
@@ -138,4 +143,20 @@ footer{
 
 .form-btn button{
     margin-right: 1rem !important;
+}
+
+/* user-nav */
+.collapse{
+    display: flex !important; 
+    justify-content: space-between !important;
+}
+
+.user-nav{
+    display: flex;
+}
+
+.user-nav a{
+    margin-right: 2rem;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
